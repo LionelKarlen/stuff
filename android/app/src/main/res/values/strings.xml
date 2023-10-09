@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">stuff</string>
+    <string name="title_activity_main">stuff</string>
+    <string name="package_name">org.suspiciouslycool.stuff</string>
+    <string name="custom_url_scheme">org.suspiciouslycool.stuff</string>
+</resources>
