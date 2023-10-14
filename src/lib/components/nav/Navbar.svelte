@@ -37,7 +37,10 @@
 			</button>
 			<ul class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
 				{#each profileElements as profileElement}
-					<li><a href={profileElement.href}>{profileElement.name}</a></li>
+					<li>
+						<a href={profileElement.href} data-sveltekit-preload-data="off">{profileElement.name}</a
+						>
+					</li>
 				{/each}
 			</ul>
 		</div>
