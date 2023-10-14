@@ -5,7 +5,7 @@
 	export let navElements: NavElement[];
 </script>
 
-<div class="btm-nav">
+<div class="btm-nav bg-base-100 shadow-md">
 	{#each navElements as navElement}
 		<a href={navElement.href} class:active={$page.url.pathname == navElement.href}>
 			<img src={`/icons/${navElement.icon}.svg`} alt={navElement.name} height="24" width="24" />

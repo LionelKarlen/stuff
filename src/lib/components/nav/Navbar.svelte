@@ -2,6 +2,7 @@
 	import type NavElement from '$lib/types/NavElement';
 
 	export let navElements: NavElement[];
+	export let profileElements: NavElement[];
 </script>
 
 <div class="navbar bg-base-100 shadow-md mb-10 px-10">
@@ -35,7 +36,9 @@
 				</svg>
 			</button>
 			<ul class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-				<li><a href="/about">About</a></li>
+				{#each profileElements as profileElement}
+					<li><a href={profileElement.href}>{profileElement.name}</a></li>
+				{/each}
 			</ul>
 		</div>
 	</div>
