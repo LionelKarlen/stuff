@@ -7,7 +7,10 @@
 
 <div class="navbar bg-base-100 shadow-md mb-10 px-10">
 	<div class="navbar-start">
-		<a class="btn btn-ghost hover:bg-transparent normal-case text-xl" href="/">stuff</a>
+		<a class="btn btn-ghost hover:bg-transparent normal-case text-xl" href="/">
+			<img src="/Logo.png" alt="stuff logo" width="40" height="40" />
+			stuff</a
+		>
 	</div>
 	<div class="navbar-end flex flex-row gap-2">
 		{#each navElements as navElement}
