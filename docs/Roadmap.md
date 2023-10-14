@@ -11,6 +11,7 @@
   -> notably distinguish local config and store it in localstorage
   -> distinguish dedicated config in database
   -> distinguish profile related config in users collection
+- devops setup to bump on main
 
 ## Bump 0.0.3
 
