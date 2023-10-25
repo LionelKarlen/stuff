@@ -23,11 +23,6 @@
 			name: 'Locations',
 			href: '/locations',
 			icon: 'map-pin'
-		},
-		{
-			name: 'Designations',
-			href: '/designations',
-			icon: 'archive-box-arrow-down'
 		}
 	];
 	const profileElements: NavElement[] = [
