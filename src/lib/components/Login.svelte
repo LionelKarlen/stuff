@@ -63,7 +63,7 @@
 				/>
 			</div>
 		{/if}
-		<button class="btn mt-3 bg-gradient-to-r from-primary to-secondary" on:click={handleSubmit}
+		<button class="btn mt-3 bg-gradient-to-r from-primary to-secondary"
 			>{isLogin ? 'Login' : 'Register'}</button
 		>
 	</form>
