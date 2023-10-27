@@ -1,6 +1,6 @@
 # Roadmap
 
-## Bump 0.0.2
+## Bump 0.2.0
 
 - handler pages
 - handler stores
@@ -13,7 +13,7 @@
   -> distinguish profile related config in users collection
 - devops setup to bump on main
 
-## Bump 0.0.3
+## Bump 0.3.0
 
 - handler form
 - stuff page
