@@ -15,4 +15,4 @@ jobs:
         with:
           file: package.json
           pattern: >
-            \\"version\\":\s\\"(.+?)\\"
+            \"version\":\s\"(.+?)\"
