@@ -1,9 +1,8 @@
 <script lang="ts">
 	import Login from '$lib/components/Login.svelte';
-	import BottomNav from '$lib/components/nav/BottomNav.svelte';
-	import Navbar from '$lib/components/nav/Navbar.svelte';
+	import NavLayout from '$lib/components/nav/NavLayout.svelte';
+	import TopNav from '$lib/components/nav/TopNav.svelte';
 	import { currentUser } from '$lib/services/pb';
-	import { isMobile } from '$lib/services/platform';
 	import type NavElement from '$lib/types/NavElement';
 	import '../app.postcss';
 	import '../fonts.css';
@@ -24,30 +23,33 @@
 			name: 'Locations',
 			href: '/locations',
 			icon: 'map-pin'
+		}
+	];
+	const profileElements: NavElement[] = [
+		{
+			name: 'Settings',
+			href: '/settings',
+			icon: 'cog-6-tooth'
 		},
 		{
-			name: 'Designations',
-			href: '/designations',
-			icon: 'archive-box-arrow-down'
+			name: 'Logout',
+			href: '/logout',
+			icon: 'arrow-right-on-rectangle'
 		}
 	];
 </script>
 
-{#if !$isMobile}
-	<Navbar {navElements} />
-{/if}
-<div class="flex justify-center w-full">
-	<div
-		class="flex flex-col justify-center justify-self-center self-center w-full px-10 md:px-20 md:w-3/4 items-center"
-	>
-		{#if $currentUser.model}
-			<slot />
-		{:else}
+{#if $currentUser.model}
+	<NavLayout {profileElements} {navElements}>
+		<slot />
+	</NavLayout>
+{:else}
+	<TopNav profileElements={[]} />
+	<div class="flex justify-center w-full">
+		<div
+			class="flex flex-col justify-center justify-self-center self-center w-full px-10 md:px-20 md:w-3/4 items-center"
+		>
 			<Login />
-		{/if}
+		</div>
 	</div>
-</div>
-
-{#if $isMobile}
-	<BottomNav {navElements} />
 {/if}
